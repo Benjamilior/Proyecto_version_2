@@ -1,0 +1,71 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled1.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyN6oZY04OyOw7CxcvqBMeso",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Benjamilior/Proyecto_version_2/blob/master/Proyeccion_Airline\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "o2PiXgX0QU9n"
+      },
+      "outputs": [],
+      "source": [
+        "import pandas as pd\n",
+        "import numpy as np\n",
+        "import matplotlib.pyplot as plt\n",
+        "from sklearn.cluster import KMeans\n",
+        "%matplotlib inline\n",
+        "\n",
+        "url_airline = ['https://raw.githubusercontent.com/Benjamilior/Proyecto_version_2/master/ALUMNOS-trainData_0.csv',\n",
+        "               'https://raw.githubusercontent.com/Benjamilior/Proyecto_version_2/master/ALUMNOS-trainData_1.csv',\n",
+        "               'https://raw.githubusercontent.com/Benjamilior/Proyecto_version_2/master/ALUMNOS-trainData_2.csv',\n",
+        "               'https://raw.githubusercontent.com/Benjamilior/Proyecto_version_2/master/ALUMNOS-trainData_3.csv',\n",
+        "               'https://raw.githubusercontent.com/Benjamilior/Proyecto_version_2/master/ALUMNOS-trainData_4.csv',\n",
+        "               'https://raw.githubusercontent.com/Benjamilior/Proyecto_version_2/master/ALUMNOS-trainData_5.csv',\n",
+        "               'https://raw.githubusercontent.com/Benjamilior/Proyecto_version_2/master/ALUMNOS-trainData_6.csv',\n",
+        "               'https://raw.githubusercontent.com/Benjamilior/Proyecto_version_2/master/ALUMNOS-trainData_7.csv',\n",
+        "               'https://raw.githubusercontent.com/Benjamilior/Proyecto_version_2/master/ALUMNOS-trainData_8.csv',\n",
+        "               'https://raw.githubusercontent.com/Benjamilior/Proyecto_version_2/master/ALUMNOS-trainData_9.csv',]\n",
+        "\n",
+        "#Merge CSV\n",
+        "\n",
+        "mergedata = pd.concat(pd.read_csv(url_airline).assign(sourcefilename = url_airline)for url_airline in url_airline)\n",
+        "mergedata = mergedata.reset_index()\n",
+        "mergedata = pd.concat([mergedata])\n",
+        "mergedata = mergedata.reset_index()\n",
+        "mergedata\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ]
+    }
+  ]
+}
